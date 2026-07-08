@@ -7,11 +7,11 @@ namespace BillingSystemMobile
 {
     public partial class UnpaidBillsPage : ContentPage
     {
-#if ANDROID
-        private const string ApiBase = "http://10.0.2.2:6969";
-#else
-        private const string ApiBase = "http://localhost:6969";
-#endif
+        #if ANDROID
+            private const string ApiBase = "http://10.0.2.2:6969";
+        #else
+            private const string ApiBase = "http://localhost:6969";
+        #endif
 
         private readonly HttpClient _http = new HttpClient();
 
