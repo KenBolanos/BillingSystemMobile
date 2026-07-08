@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BillingSystemMobile.LoginPage"
+             Title="Login"
+             BackgroundColor="#F5F5F5">
+
+
+    <ScrollView>
+        <VerticalStackLayout Padding="40" Spacing="16"
+                             VerticalOptions="Center">
+
+            <Border StrokeShape="RoundRectangle 20"
+                    BackgroundColor="Transparent"
+                    StrokeThickness="2"
+                    Stroke ="Black"
+                    Padding="20"
+                    HorizontalOptions="Center">
+                <Image Source="water.png"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Aspect="AspectFit"/>
+            </Border>
+
+            <!-- App Title -->
+            <Label Text="Billing System"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1F4E79"
+                   Margin="0,0,0,4"/>
+
+
+            <!-- Username -->
+            <Label Text="Username" FontAttributes="Bold" FontSize="14"/>
+            <Entry x:Name="entryUsername"
+                   Placeholder="Enter your username"
+                   FontSize="14"
+                   ReturnType="Next"/>
+
+
+            <!-- Password -->
+            <Label Text="Password" FontAttributes="Bold" FontSize="14"/>
+            <Entry x:Name="entryPassword"
+                   Placeholder="Enter your password"
+                   IsPassword="True"
+                   FontSize="14"
+                   ReturnType="Go"
+                   Completed="OnPasswordCompleted"/>
+
+
+            <!-- Login Button -->
+            <Button x:Name="btnLogin"
+                    Text="Log In"
+                    BackgroundColor="#2E75B6"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Margin="0,12,0,0"
+                    Clicked="OnLoginClicked"/>
+
+
+            <!-- Error Message Label (hidden by default) -->
+            <Label x:Name="lblError"
+                   Text=""
+                   TextColor="Red"
+                   FontSize="13"
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
+

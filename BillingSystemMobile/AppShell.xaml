@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:BillingSystemMobile"
+       x:Class="BillingSystemMobile.AppShell"
+       Shell.NavBarIsVisible="False">
+
+
+    <!-- LoginPage is the first page shown when the app starts -->
+    <ShellContent
+        Title="Login"
+        Route="LoginPage"
+        ContentTemplate="{DataTemplate local:LoginPage}" />
+
+
+    <!-- MainPage is registered so //MainPage navigation works -->
+    <ShellContent
+        Title="Billing Entry"
+        Route="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}" />
+
+    <ShellContent Title="Unpaid Bills"
+              ContentTemplate="{DataTemplate local:UnpaidBillsPage}"
+              Route="UnpaidBillsPage" />
+
+</Shell>
