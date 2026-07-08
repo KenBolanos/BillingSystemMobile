@@ -24,11 +24,8 @@
                    TextColor="#777777"
                    Margin="0,0,0,10"/>
 
-            <!-- Bills are added here in code-behind, no ItemTemplate/Binding -->
             <VerticalStackLayout x:Name="stackBills" Spacing="10"/>
 
-
-            <!-- Empty state card is added here in code-behind when there are no unpaid bills -->
             <VerticalStackLayout x:Name="stackEmpty" IsVisible="False"/>
 
             <Button x:Name="btnLogout"

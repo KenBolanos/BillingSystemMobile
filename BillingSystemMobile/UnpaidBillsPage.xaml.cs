@@ -75,7 +75,6 @@ namespace BillingSystemMobile
             }
         }
 
-        // Friendly "all caught up" card shown when there are no unpaid bills.
         private Border BuildEmptyState()
         {
             var lblIcon = new Label
